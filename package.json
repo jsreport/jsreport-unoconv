@@ -1,6 +1,6 @@
 {
   "name": "jsreport-unoconv",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "jsreport unoconv for converting openoffice supported formats",
   "homepage": "https://github.com/jsreport/jsreport-unoconv",
   "repository": {
