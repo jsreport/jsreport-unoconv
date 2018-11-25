@@ -16,11 +16,23 @@ export default class Properties extends Component {
         <div className='form-group'><label>Format</label>
           <input
             type='text' placeholder='pdf' value={entity.unoconv ? entity.unoconv.format : ''}
-            onChange={(v) => onChange({ _id: entity._id, unoconv: { format: v.target.value } })} />
+            onChange={(v) => onChange({
+              _id: entity._id,
+              unoconv: {
+                format: v.target.value,
+                enabled: !entity.unoconv || entity.unoconv.enabled !== false
+              }
+            })} />
         </div>
         <div className='form-group'>
           <label>Enabled</label>
-          <input type='checkbox' checked={entity.enabled !== false} onChange={(v) => onChange({ _id: entity._id, enabled: v.target.checked })} />
+          <input type='checkbox' checked={!entity.unoconv || entity.unoconv.enabled !== false} onChange={(v) => onChange({
+            _id: entity._id,
+            unoconv: {
+              enabled: v.target.checked,
+              format: entity.unoconv ? entity.unoconv.format : ''
+            }
+          })} />
         </div>
       </div>
     )
