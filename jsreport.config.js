@@ -1,10 +1,10 @@
 
 module.exports = {
-  'name': 'unoconv',
-  'main': 'lib/unoconv.js',
-  'optionsSchema': {
+  name: 'unoconv',
+  main: 'lib/unoconv.js',
+  optionsSchema: {
     extensions: {
-      'unoconv': {
+      unoconv: {
         type: 'object',
         properties: {
           command: { type: 'string', default: 'unoconv' }
@@ -12,5 +12,5 @@ module.exports = {
       }
     }
   },
-  'dependencies': ['templates', 'assets']
+  dependencies: ['templates', 'assets']
 }
